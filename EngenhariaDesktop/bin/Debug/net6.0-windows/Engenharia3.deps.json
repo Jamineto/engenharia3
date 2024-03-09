@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Engenharia3/1.0.0": {
+        "runtime": {
+          "Engenharia3.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Engenharia3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
