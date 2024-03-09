@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            ToolStripMenuItem entradaDeProdutosToolStripMenuItem;
+            ToolStripMenuItem perdaToolStripMenuItem;
+            ToolStripMenuItem trocaToolStripMenuItem;
+            ToolStripMenuItem zerarEstoqueToolStripMenuItem;
+            ToolStripMenuItem balançoToolStripMenuItem;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_menu));
             pnl_menu = new Panel();
             lbl_nome = new Label();
@@ -40,11 +45,6 @@
             pessoasToolStripMenuItem = new ToolStripMenuItem();
             usuáriosToolStripMenuItem = new ToolStripMenuItem();
             estoqueToolStripMenuItem = new ToolStripMenuItem();
-            entradaDeProdutosToolStripMenuItem = new ToolStripMenuItem();
-            perdaToolStripMenuItem = new ToolStripMenuItem();
-            trocaToolStripMenuItem = new ToolStripMenuItem();
-            zerarEstoqueToolStripMenuItem = new ToolStripMenuItem();
-            balançoToolStripMenuItem = new ToolStripMenuItem();
             vendaToolStripMenuItem = new ToolStripMenuItem();
             vendaDeProdutosToolStripMenuItem = new ToolStripMenuItem();
             préVendaToolStripMenuItem = new ToolStripMenuItem();
@@ -53,9 +53,51 @@
             saídaDeCaixaToolStripMenuItem = new ToolStripMenuItem();
             entradaDeCaixaToolStripMenuItem = new ToolStripMenuItem();
             conferênciaDeCaixaToolStripMenuItem = new ToolStripMenuItem();
+            pictureBox1 = new PictureBox();
+            entradaDeProdutosToolStripMenuItem = new ToolStripMenuItem();
+            perdaToolStripMenuItem = new ToolStripMenuItem();
+            trocaToolStripMenuItem = new ToolStripMenuItem();
+            zerarEstoqueToolStripMenuItem = new ToolStripMenuItem();
+            balançoToolStripMenuItem = new ToolStripMenuItem();
             pnl_menu.SuspendLayout();
             menu_principal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
+            // 
+            // entradaDeProdutosToolStripMenuItem
+            // 
+            entradaDeProdutosToolStripMenuItem.ForeColor = Color.Black;
+            entradaDeProdutosToolStripMenuItem.Name = "entradaDeProdutosToolStripMenuItem";
+            entradaDeProdutosToolStripMenuItem.Size = new Size(444, 36);
+            entradaDeProdutosToolStripMenuItem.Text = "Entrada de Produtos";
+            // 
+            // perdaToolStripMenuItem
+            // 
+            perdaToolStripMenuItem.ForeColor = Color.Black;
+            perdaToolStripMenuItem.Name = "perdaToolStripMenuItem";
+            perdaToolStripMenuItem.Size = new Size(444, 36);
+            perdaToolStripMenuItem.Text = "Perda";
+            // 
+            // trocaToolStripMenuItem
+            // 
+            trocaToolStripMenuItem.ForeColor = Color.Black;
+            trocaToolStripMenuItem.Name = "trocaToolStripMenuItem";
+            trocaToolStripMenuItem.Size = new Size(444, 36);
+            trocaToolStripMenuItem.Text = "Troca";
+            // 
+            // zerarEstoqueToolStripMenuItem
+            // 
+            zerarEstoqueToolStripMenuItem.ForeColor = Color.Black;
+            zerarEstoqueToolStripMenuItem.Name = "zerarEstoqueToolStripMenuItem";
+            zerarEstoqueToolStripMenuItem.Size = new Size(444, 36);
+            zerarEstoqueToolStripMenuItem.Text = "Zerar Estoque";
+            // 
+            // balançoToolStripMenuItem
+            // 
+            balançoToolStripMenuItem.ForeColor = Color.Black;
+            balançoToolStripMenuItem.Name = "balançoToolStripMenuItem";
+            balançoToolStripMenuItem.Size = new Size(444, 36);
+            balançoToolStripMenuItem.Text = "Balanço";
             // 
             // pnl_menu
             // 
@@ -71,11 +113,12 @@
             // lbl_nome
             // 
             lbl_nome.BackColor = Color.Transparent;
-            lbl_nome.Font = new Font("Stencil", 28F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_nome.ForeColor = Color.OrangeRed;
-            lbl_nome.Location = new Point(0, -18);
+            lbl_nome.Dock = DockStyle.Bottom;
+            lbl_nome.Font = new Font("Pokemon Solid", 20.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_nome.ForeColor = Color.Black;
+            lbl_nome.Location = new Point(0, -30);
             lbl_nome.Name = "lbl_nome";
-            lbl_nome.Size = new Size(800, 71);
+            lbl_nome.Size = new Size(800, 83);
             lbl_nome.TabIndex = 0;
             lbl_nome.Text = "Sistema de vendas XPTO";
             lbl_nome.TextAlign = ContentAlignment.MiddleCenter;
@@ -95,157 +138,144 @@
             menu_principal.Items.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem, estoqueToolStripMenuItem, vendaToolStripMenuItem });
             menu_principal.Location = new Point(0, 0);
             menu_principal.Name = "menu_principal";
-            menu_principal.Size = new Size(800, 37);
+            menu_principal.Size = new Size(800, 40);
             menu_principal.TabIndex = 2;
             menu_principal.Text = "menuStrip1";
             menu_principal.ItemClicked += menuStrip1_ItemClicked;
             // 
             // cadastrosToolStripMenuItem
             // 
+            cadastrosToolStripMenuItem.BackColor = Color.Transparent;
             cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { produtosToolStripMenuItem, categoriasToolStripMenuItem, pessoasToolStripMenuItem, usuáriosToolStripMenuItem });
-            cadastrosToolStripMenuItem.ForeColor = Color.OrangeRed;
+            cadastrosToolStripMenuItem.Font = new Font("Ravie", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point);
+            cadastrosToolStripMenuItem.ForeColor = Color.Black;
             cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            cadastrosToolStripMenuItem.Size = new Size(160, 33);
+            cadastrosToolStripMenuItem.Size = new Size(196, 36);
             cadastrosToolStripMenuItem.Text = "Cadastros";
             cadastrosToolStripMenuItem.Click += cadastrosToolStripMenuItem_Click;
             // 
             // produtosToolStripMenuItem
             // 
-            produtosToolStripMenuItem.ForeColor = Color.OrangeRed;
+            produtosToolStripMenuItem.Font = new Font("Pokemon Solid", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            produtosToolStripMenuItem.ForeColor = Color.Black;
             produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            produtosToolStripMenuItem.Size = new Size(243, 34);
+            produtosToolStripMenuItem.Size = new Size(246, 70);
             produtosToolStripMenuItem.Text = "Produtos";
             // 
             // categoriasToolStripMenuItem
             // 
-            categoriasToolStripMenuItem.ForeColor = Color.OrangeRed;
+            categoriasToolStripMenuItem.Font = new Font("Pokemon Solid", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            categoriasToolStripMenuItem.ForeColor = Color.Black;
             categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            categoriasToolStripMenuItem.Size = new Size(243, 34);
+            categoriasToolStripMenuItem.Size = new Size(246, 70);
             categoriasToolStripMenuItem.Text = "Categorias";
             // 
             // pessoasToolStripMenuItem
             // 
-            pessoasToolStripMenuItem.ForeColor = Color.OrangeRed;
+            pessoasToolStripMenuItem.Font = new Font("Pokemon Solid", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            pessoasToolStripMenuItem.ForeColor = Color.Black;
             pessoasToolStripMenuItem.Name = "pessoasToolStripMenuItem";
-            pessoasToolStripMenuItem.Size = new Size(243, 34);
+            pessoasToolStripMenuItem.Size = new Size(246, 70);
             pessoasToolStripMenuItem.Text = "Pessoas";
             // 
             // usuáriosToolStripMenuItem
             // 
-            usuáriosToolStripMenuItem.ForeColor = Color.OrangeRed;
+            usuáriosToolStripMenuItem.Font = new Font("Pokemon Solid", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            usuáriosToolStripMenuItem.ForeColor = Color.Black;
             usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            usuáriosToolStripMenuItem.Size = new Size(243, 34);
+            usuáriosToolStripMenuItem.Size = new Size(246, 70);
             usuáriosToolStripMenuItem.Text = "Usuários";
             // 
             // estoqueToolStripMenuItem
             // 
+            estoqueToolStripMenuItem.BackColor = Color.Transparent;
             estoqueToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { entradaDeProdutosToolStripMenuItem, perdaToolStripMenuItem, trocaToolStripMenuItem, zerarEstoqueToolStripMenuItem, balançoToolStripMenuItem });
-            estoqueToolStripMenuItem.ForeColor = Color.OrangeRed;
+            estoqueToolStripMenuItem.Font = new Font("Ravie", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point);
+            estoqueToolStripMenuItem.ForeColor = Color.Black;
             estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
-            estoqueToolStripMenuItem.Size = new Size(134, 33);
+            estoqueToolStripMenuItem.Size = new Size(159, 36);
             estoqueToolStripMenuItem.Text = "Estoque";
-            // 
-            // entradaDeProdutosToolStripMenuItem
-            // 
-            entradaDeProdutosToolStripMenuItem.ForeColor = Color.OrangeRed;
-            entradaDeProdutosToolStripMenuItem.Name = "entradaDeProdutosToolStripMenuItem";
-            entradaDeProdutosToolStripMenuItem.Size = new Size(375, 34);
-            entradaDeProdutosToolStripMenuItem.Text = "Entrada de Produtos";
-            // 
-            // perdaToolStripMenuItem
-            // 
-            perdaToolStripMenuItem.ForeColor = Color.OrangeRed;
-            perdaToolStripMenuItem.Name = "perdaToolStripMenuItem";
-            perdaToolStripMenuItem.Size = new Size(375, 34);
-            perdaToolStripMenuItem.Text = "Perda";
-            // 
-            // trocaToolStripMenuItem
-            // 
-            trocaToolStripMenuItem.ForeColor = Color.OrangeRed;
-            trocaToolStripMenuItem.Name = "trocaToolStripMenuItem";
-            trocaToolStripMenuItem.Size = new Size(375, 34);
-            trocaToolStripMenuItem.Text = "Troca";
-            // 
-            // zerarEstoqueToolStripMenuItem
-            // 
-            zerarEstoqueToolStripMenuItem.ForeColor = Color.OrangeRed;
-            zerarEstoqueToolStripMenuItem.Name = "zerarEstoqueToolStripMenuItem";
-            zerarEstoqueToolStripMenuItem.Size = new Size(375, 34);
-            zerarEstoqueToolStripMenuItem.Text = "Zerar Estoque";
-            // 
-            // balançoToolStripMenuItem
-            // 
-            balançoToolStripMenuItem.ForeColor = Color.OrangeRed;
-            balançoToolStripMenuItem.Name = "balançoToolStripMenuItem";
-            balançoToolStripMenuItem.Size = new Size(375, 34);
-            balançoToolStripMenuItem.Text = "Balanço";
             // 
             // vendaToolStripMenuItem
             // 
+            vendaToolStripMenuItem.BackColor = Color.Transparent;
             vendaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { vendaDeProdutosToolStripMenuItem, préVendaToolStripMenuItem, orçamentoToolStripMenuItem, caixaToolStripMenuItem });
-            vendaToolStripMenuItem.ForeColor = Color.OrangeRed;
+            vendaToolStripMenuItem.Font = new Font("Ravie", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point);
+            vendaToolStripMenuItem.ForeColor = Color.Black;
             vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
-            vendaToolStripMenuItem.Size = new Size(111, 33);
+            vendaToolStripMenuItem.Size = new Size(127, 36);
             vendaToolStripMenuItem.Text = "Venda";
             // 
             // vendaDeProdutosToolStripMenuItem
             // 
-            vendaDeProdutosToolStripMenuItem.ForeColor = Color.OrangeRed;
+            vendaDeProdutosToolStripMenuItem.ForeColor = Color.Black;
             vendaDeProdutosToolStripMenuItem.Name = "vendaDeProdutosToolStripMenuItem";
-            vendaDeProdutosToolStripMenuItem.Size = new Size(354, 34);
+            vendaDeProdutosToolStripMenuItem.Size = new Size(406, 36);
             vendaDeProdutosToolStripMenuItem.Text = "Venda de Produtos";
             vendaDeProdutosToolStripMenuItem.Click += vendaDeProdutosToolStripMenuItem_Click;
             // 
             // préVendaToolStripMenuItem
             // 
-            préVendaToolStripMenuItem.ForeColor = Color.OrangeRed;
+            préVendaToolStripMenuItem.ForeColor = Color.Black;
             préVendaToolStripMenuItem.Name = "préVendaToolStripMenuItem";
-            préVendaToolStripMenuItem.Size = new Size(354, 34);
+            préVendaToolStripMenuItem.Size = new Size(406, 36);
             préVendaToolStripMenuItem.Text = "Pré-Venda";
             // 
             // orçamentoToolStripMenuItem
             // 
-            orçamentoToolStripMenuItem.ForeColor = Color.OrangeRed;
+            orçamentoToolStripMenuItem.ForeColor = Color.Black;
             orçamentoToolStripMenuItem.Name = "orçamentoToolStripMenuItem";
-            orçamentoToolStripMenuItem.Size = new Size(354, 34);
+            orçamentoToolStripMenuItem.Size = new Size(406, 36);
             orçamentoToolStripMenuItem.Text = "Orçamento";
             // 
             // caixaToolStripMenuItem
             // 
             caixaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { saídaDeCaixaToolStripMenuItem, entradaDeCaixaToolStripMenuItem, conferênciaDeCaixaToolStripMenuItem });
-            caixaToolStripMenuItem.ForeColor = Color.OrangeRed;
+            caixaToolStripMenuItem.ForeColor = Color.Black;
             caixaToolStripMenuItem.Name = "caixaToolStripMenuItem";
-            caixaToolStripMenuItem.Size = new Size(354, 34);
+            caixaToolStripMenuItem.Size = new Size(406, 36);
             caixaToolStripMenuItem.Text = "Caixa";
             // 
             // saídaDeCaixaToolStripMenuItem
             // 
-            saídaDeCaixaToolStripMenuItem.ForeColor = Color.OrangeRed;
+            saídaDeCaixaToolStripMenuItem.ForeColor = Color.Black;
             saídaDeCaixaToolStripMenuItem.Name = "saídaDeCaixaToolStripMenuItem";
-            saídaDeCaixaToolStripMenuItem.Size = new Size(381, 34);
+            saídaDeCaixaToolStripMenuItem.Size = new Size(445, 36);
             saídaDeCaixaToolStripMenuItem.Text = "Saída de Caixa";
             // 
             // entradaDeCaixaToolStripMenuItem
             // 
-            entradaDeCaixaToolStripMenuItem.ForeColor = Color.OrangeRed;
+            entradaDeCaixaToolStripMenuItem.ForeColor = Color.Black;
             entradaDeCaixaToolStripMenuItem.Name = "entradaDeCaixaToolStripMenuItem";
-            entradaDeCaixaToolStripMenuItem.Size = new Size(381, 34);
+            entradaDeCaixaToolStripMenuItem.Size = new Size(445, 36);
             entradaDeCaixaToolStripMenuItem.Text = "Entrada de Caixa";
             // 
             // conferênciaDeCaixaToolStripMenuItem
             // 
-            conferênciaDeCaixaToolStripMenuItem.ForeColor = Color.OrangeRed;
+            conferênciaDeCaixaToolStripMenuItem.ForeColor = Color.Black;
             conferênciaDeCaixaToolStripMenuItem.Name = "conferênciaDeCaixaToolStripMenuItem";
-            conferênciaDeCaixaToolStripMenuItem.Size = new Size(381, 34);
+            conferênciaDeCaixaToolStripMenuItem.Size = new Size(445, 36);
             conferênciaDeCaixaToolStripMenuItem.Text = "Conferência de Caixa";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(350, 170);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(107, 112);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
             // 
             // frm_menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackColor = SystemColors.GradientActiveCaption;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox1);
             Controls.Add(menu_principal);
             Controls.Add(pnl_menu);
             MainMenuStrip = menu_principal;
@@ -257,6 +287,7 @@
             pnl_menu.ResumeLayout(false);
             menu_principal.ResumeLayout(false);
             menu_principal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -287,5 +318,6 @@
         private ToolStripMenuItem entradaDeCaixaToolStripMenuItem;
         private ToolStripMenuItem conferênciaDeCaixaToolStripMenuItem;
         private MenuStrip menu_principal;
+        private PictureBox pictureBox1;
     }
 }

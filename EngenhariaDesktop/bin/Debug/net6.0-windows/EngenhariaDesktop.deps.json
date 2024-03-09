@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "EngenhariaDesktop/1.0.0": {
+        "dependencies": {
+          "EngenhariaWeb": "1.0.0"
+        },
+        "runtime": {
+          "EngenhariaDesktop.dll": {}
+        }
+      },
+      "EngenhariaWeb/1.0.0": {
+        "runtime": {
+          "EngenhariaWeb.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EngenhariaDesktop/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EngenhariaWeb/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
