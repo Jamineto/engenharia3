@@ -31,5 +31,20 @@ namespace EngenhariaDesktop
         {
 
         }
+
+        private void btn_entrar_Click(object sender, EventArgs e)
+        {
+
+            frm_menu menu = new frm_menu();
+            if (tx_login.Text == "teste" && tx_senha.Text == "teste")
+            {
+                menu.Show();
+                this.Hide();
+
+            }
+            else
+                lbl_invalido.Visible = true;
+
+        }
     }
 }

@@ -39,6 +39,7 @@
             label1 = new Label();
             btn_entrar = new Button();
             pictureBox3 = new PictureBox();
+            lbl_invalido = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -136,18 +137,30 @@
             btn_entrar.TabIndex = 8;
             btn_entrar.Text = "ENTRAR";
             btn_entrar.UseVisualStyleBackColor = false;
+            btn_entrar.Click += btn_entrar_Click;
             // 
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.ErrorImage = (Image)resources.GetObject("pictureBox3.ErrorImage");
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(26, 396);
+            pictureBox3.Location = new Point(26, 395);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(148, 127);
+            pictureBox3.Size = new Size(122, 128);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 9;
             pictureBox3.TabStop = false;
+            // 
+            // lbl_invalido
+            // 
+            lbl_invalido.AutoSize = true;
+            lbl_invalido.ForeColor = Color.Red;
+            lbl_invalido.Location = new Point(109, 358);
+            lbl_invalido.Name = "lbl_invalido";
+            lbl_invalido.Size = new Size(186, 20);
+            lbl_invalido.TabIndex = 11;
+            lbl_invalido.Text = "Login e/ou senha inválidos";
+            lbl_invalido.Visible = false;
             // 
             // frm_login
             // 
@@ -155,6 +168,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(382, 553);
+            Controls.Add(lbl_invalido);
             Controls.Add(pictureBox3);
             Controls.Add(btn_entrar);
             Controls.Add(label1);
@@ -187,5 +201,7 @@
         private Label label1;
         private Button btn_entrar;
         private PictureBox pictureBox3;
+        private Label label2;
+        private Label lbl_invalido;
     }
 }
