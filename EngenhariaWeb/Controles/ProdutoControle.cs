@@ -20,6 +20,21 @@ namespace EngenhariaWeb.Controles
             return produto.obterProdutos(con);
         }
 
+        public bool gravarProduto(int codProd, string descricao, string preco, int qtd_estoque)
+        {
+            Produto produto = new Produto();
+            produto.id = codProd;
+            produto.descricao = descricao;
+            produto.preco = (float)Convert.ToDouble(preco);
+            produto.estoque = qtd_estoque;
+            produto.categoria = "Teste";
+            Singleton instance = Singleton.getInstance();
+            MySqlConnection con = instance.ConnectionStart();
+            con = instance.ConnectionStart();
+            con.Open();
+            return produto.gravarProduto(produto, con);
+        }
+
         public Produto obterPorCodigo(int id)
         {
             Produto produto = new Produto();

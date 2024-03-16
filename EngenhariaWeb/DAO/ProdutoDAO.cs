@@ -7,9 +7,9 @@ namespace EngenhariaWeb.DAO
 {
     public class ProdutoDAO
     {
-        public List<Models.Produto> obterProdutos(MySqlConnection con)
+        public List<Produto> obterProdutos(MySqlConnection con)
         {
-            List<Models.Produto> produtos = new List<Models.Produto>();
+            List<Produto> produtos = new List<Produto>();
             try
             {
 
@@ -57,6 +57,68 @@ namespace EngenhariaWeb.DAO
             }
 
             return produtos;
+        }
+
+        public bool gravarProduto(Produto prod, MySqlConnection con)
+        {
+            bool op = false;
+            try
+            {
+
+                using (con)
+                {
+                    try
+                    {
+                        MySqlCommand cmd = new MySqlCommand();
+                        cmd.Connection = con;
+
+                        if (prod.id == 0)
+                        {
+                            cmd.CommandText = "INSERT INTO  produto (pro_codigo, pro_descricao, pro_categoria, pro_estoque, pro_preco) values (@cod, @desc, @cat, @estq, @preco)";
+
+                            MySqlParameter parCod = new MySqlParameter("@cod", prod.id);
+                            MySqlParameter parDesc = new MySqlParameter("@desc", prod.descricao);
+                            MySqlParameter parCat = new MySqlParameter("@cat", prod.categoria);
+                            MySqlParameter parEstq = new MySqlParameter("@estq", prod.estoque);
+                            MySqlParameter parPreco = new MySqlParameter("@preco", prod.preco);
+                            cmd.Parameters.Add(parCod);
+                            cmd.Parameters.Add(parDesc);
+                            cmd.Parameters.Add(parCat);
+                            cmd.Parameters.Add(parEstq);
+                            cmd.Parameters.Add(parPreco);
+                            cmd.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            cmd.CommandText = $"UPDATE produto SET pro_descricao = @desc, pro_categoria = @cat, pro_estoque = @estq, pro_preco = @preco where pro_codigo = {prod.id}";
+
+                            MySqlParameter parDesc = new MySqlParameter("@desc", prod.descricao);
+                            MySqlParameter parCat = new MySqlParameter("@cat", prod.categoria);
+                            MySqlParameter parEstq = new MySqlParameter("@estq", prod.estoque);
+                            MySqlParameter parPreco = new MySqlParameter("@preco", prod.preco);
+                            cmd.Parameters.Add(parDesc);
+                            cmd.Parameters.Add(parCat);
+                            cmd.Parameters.Add(parEstq);
+                            cmd.Parameters.Add(parPreco);
+                            cmd.ExecuteNonQuery();
+
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        throw ex;
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return op;
         }
 
         public int obterEstoqueProduto(int id, MySqlConnection con)

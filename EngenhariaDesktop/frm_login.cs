@@ -46,13 +46,12 @@ namespace EngenhariaDesktop
                 lbl_invalido.Visible = true;
 
         }
-<<<<<<< HEAD
+
 
         private void frm_login_Load(object sender, EventArgs e)
         {
             tx_senha.PasswordChar = '*';
         }
-=======
->>>>>>> 811e76c7c3feec1124300e245b7830b559d2d7d8
+
     }
 }

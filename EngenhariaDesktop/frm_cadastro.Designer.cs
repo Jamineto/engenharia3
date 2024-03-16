@@ -38,7 +38,7 @@
             tx_descricao = new TextBox();
             qtd_estoque = new NumericUpDown();
             label1 = new Label();
-            textBox1 = new TextBox();
+            tx_preco = new TextBox();
             label2 = new Label();
             cb_transporte = new ComboBox();
             label3 = new Label();
@@ -133,12 +133,12 @@
             label1.TabIndex = 23;
             label1.Text = "Estoque";
             // 
-            // textBox1
+            // tx_preco
             // 
-            textBox1.Location = new Point(231, 248);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(282, 27);
-            textBox1.TabIndex = 24;
+            tx_preco.Location = new Point(231, 248);
+            tx_preco.Name = "tx_preco";
+            tx_preco.Size = new Size(282, 27);
+            tx_preco.TabIndex = 24;
             // 
             // label2
             // 
@@ -173,23 +173,25 @@
             // 
             btn_concluir.BackColor = SystemColors.Highlight;
             btn_concluir.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_concluir.Location = new Point(593, 358);
+            btn_concluir.Location = new Point(643, 375);
             btn_concluir.Name = "btn_concluir";
-            btn_concluir.Size = new Size(168, 66);
+            btn_concluir.Size = new Size(118, 52);
             btn_concluir.TabIndex = 29;
             btn_concluir.Text = "Salvar";
             btn_concluir.UseVisualStyleBackColor = false;
+            btn_concluir.Click += btn_concluir_Click;
             // 
             // bt_cancelar
             // 
             bt_cancelar.BackColor = Color.Red;
             bt_cancelar.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            bt_cancelar.Location = new Point(395, 358);
+            bt_cancelar.Location = new Point(499, 375);
             bt_cancelar.Name = "bt_cancelar";
-            bt_cancelar.Size = new Size(168, 66);
+            bt_cancelar.Size = new Size(118, 52);
             bt_cancelar.TabIndex = 28;
             bt_cancelar.Text = "Cancelar";
             bt_cancelar.UseVisualStyleBackColor = false;
+            bt_cancelar.Click += bt_cancelar_Click;
             // 
             // frm_cadastro
             // 
@@ -201,7 +203,7 @@
             Controls.Add(label3);
             Controls.Add(cb_transporte);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(tx_preco);
             Controls.Add(label1);
             Controls.Add(qtd_estoque);
             Controls.Add(lbl_desc);
@@ -215,6 +217,7 @@
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro de produto";
+            Load += frm_cadastro_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)qtd_estoque).EndInit();
@@ -239,5 +242,6 @@
         private Label label3;
         private Button btn_concluir;
         private Button bt_cancelar;
+        private TextBox tx_preco;
     }
 }

@@ -45,6 +45,15 @@ namespace EngenhariaWeb.Controllers
             return estoque;
         }
 
+        [HttpPost]
+        public bool gravarProduto(int codProd, string descricao, string preco, int qtd_estoque)
+        {
+            bool op = false;
+            ProdutoControle proControle = new ProdutoControle();
+            op = proControle.gravarProduto(codProd, descricao, preco, qtd_estoque);
+            return op;
+        }
+
         public void guardaItens(int id, int qtd)
         {
             ProdutoControle proControle = new ProdutoControle();

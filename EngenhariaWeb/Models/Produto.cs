@@ -28,6 +28,12 @@ namespace EngenhariaWeb.Models
             return produtoDAO.obterPorCodigo(id, con);
         }
 
+        public bool gravarProduto(Produto prod, MySqlConnection con)
+        {
+            ProdutoDAO produtoDAO = new ProdutoDAO();
+            return produtoDAO.gravarProduto(prod, con);
+        }
+
         public int obterEstoqueProduto(int id, MySqlConnection con)
         {
             ProdutoDAO produtoDAO = new ProdutoDAO();
