@@ -3,9 +3,9 @@
     public class Venda
     {
         private int _id;
-        private DateTime dataHora { get; set; }
-        private float valorTotal { get; set; }
-        private String pagamento { get; set; }
+        public DateTime dataHora { get; set; }
+        public float valorTotal { get; set; }
+        public String pagamento { get; set; }
 
         public Venda(int id, DateTime dataHora, float valorTotal, string pagamento)
         {

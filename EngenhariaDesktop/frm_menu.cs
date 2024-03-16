@@ -41,5 +41,11 @@ namespace EngenhariaDesktop
             frm_vendaProd fvp = new frm_vendaProd();
             fvp.Show();
         }
+
+        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_cadastro fCad = new frm_cadastro();
+            fCad.Show();
+        }
     }
 }

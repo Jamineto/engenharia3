@@ -35,8 +35,12 @@
             lbl_desc = new Label();
             tx_descricao = new TextBox();
             lbl_estoque = new Label();
-            textBox1 = new TextBox();
+            tx_estoque = new TextBox();
             panel2 = new Panel();
+            search = new PictureBox();
+            qtd_prod = new NumericUpDown();
+            label2 = new Label();
+            add_prod = new PictureBox();
             panel8 = new Panel();
             pictureBox1 = new PictureBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
@@ -56,6 +60,7 @@
             tx_nomeCli = new TextBox();
             pictureBox3 = new PictureBox();
             panel6 = new Panel();
+            lbl_listaProd = new Label();
             btn_concluir = new Button();
             bt_cancelar = new Button();
             cb_pagamento = new ComboBox();
@@ -69,6 +74,9 @@
             panel7 = new Panel();
             lbl_tranporte = new Label();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)search).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)qtd_prod).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)add_prod).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             flowLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
@@ -93,7 +101,6 @@
             tx_codigo.Name = "tx_codigo";
             tx_codigo.Size = new Size(125, 27);
             tx_codigo.TabIndex = 2;
-            tx_codigo.TextChanged += tx_codigo_TextChanged;
             // 
             // lbl_codigo
             // 
@@ -110,7 +117,7 @@
             // 
             lbl_desc.AutoSize = true;
             lbl_desc.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_desc.Location = new Point(332, 51);
+            lbl_desc.Location = new Point(360, 51);
             lbl_desc.Name = "lbl_desc";
             lbl_desc.Size = new Size(117, 24);
             lbl_desc.TabIndex = 3;
@@ -118,38 +125,43 @@
             // 
             // tx_descricao
             // 
-            tx_descricao.Location = new Point(332, 78);
+            tx_descricao.Location = new Point(360, 78);
             tx_descricao.Name = "tx_descricao";
-            tx_descricao.Size = new Size(384, 27);
+            tx_descricao.ReadOnly = true;
+            tx_descricao.Size = new Size(282, 27);
             tx_descricao.TabIndex = 4;
             // 
             // lbl_estoque
             // 
             lbl_estoque.AutoSize = true;
             lbl_estoque.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_estoque.Location = new Point(783, 51);
+            lbl_estoque.Location = new Point(817, 51);
             lbl_estoque.Name = "lbl_estoque";
             lbl_estoque.Size = new Size(163, 24);
             lbl_estoque.TabIndex = 5;
             lbl_estoque.Text = "Estoque Atual";
             // 
-            // textBox1
+            // tx_estoque
             // 
-            textBox1.Location = new Point(783, 78);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(163, 27);
-            textBox1.TabIndex = 6;
+            tx_estoque.Location = new Point(817, 78);
+            tx_estoque.Name = "tx_estoque";
+            tx_estoque.ReadOnly = true;
+            tx_estoque.Size = new Size(163, 27);
+            tx_estoque.TabIndex = 6;
             // 
             // panel2
             // 
             panel2.BackColor = SystemColors.GradientInactiveCaption;
+            panel2.Controls.Add(search);
+            panel2.Controls.Add(qtd_prod);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(add_prod);
             panel2.Controls.Add(panel8);
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(flowLayoutPanel1);
             panel2.Controls.Add(lbl_estoque);
             panel2.Controls.Add(tx_codigo);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(tx_estoque);
             panel2.Controls.Add(lbl_codigo);
             panel2.Controls.Add(lbl_desc);
             panel2.Controls.Add(tx_descricao);
@@ -157,6 +169,52 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1062, 129);
             panel2.TabIndex = 8;
+            // 
+            // search
+            // 
+            search.BackColor = Color.Transparent;
+            search.Cursor = Cursors.Hand;
+            search.ErrorImage = (Image)resources.GetObject("search.ErrorImage");
+            search.Image = (Image)resources.GetObject("search.Image");
+            search.Location = new Point(293, 78);
+            search.Name = "search";
+            search.Size = new Size(40, 27);
+            search.SizeMode = PictureBoxSizeMode.StretchImage;
+            search.TabIndex = 22;
+            search.TabStop = false;
+            search.Click += search_Click;
+            // 
+            // qtd_prod
+            // 
+            qtd_prod.Location = new Point(662, 79);
+            qtd_prod.Name = "qtd_prod";
+            qtd_prod.Size = new Size(123, 27);
+            qtd_prod.TabIndex = 21;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(662, 51);
+            label2.Name = "label2";
+            label2.Size = new Size(132, 24);
+            label2.TabIndex = 19;
+            label2.Text = "quantidade";
+            label2.Click += label2_Click_1;
+            // 
+            // add_prod
+            // 
+            add_prod.BackColor = Color.Transparent;
+            add_prod.Cursor = Cursors.Hand;
+            add_prod.ErrorImage = (Image)resources.GetObject("add_prod.ErrorImage");
+            add_prod.Image = (Image)resources.GetObject("add_prod.Image");
+            add_prod.Location = new Point(1008, 78);
+            add_prod.Name = "add_prod";
+            add_prod.Size = new Size(40, 27);
+            add_prod.SizeMode = PictureBoxSizeMode.StretchImage;
+            add_prod.TabIndex = 18;
+            add_prod.TabStop = false;
+            add_prod.Click += add_prod_Click;
             // 
             // panel8
             // 
@@ -215,7 +273,7 @@
             // 
             tx_codCli.Location = new Point(174, 99);
             tx_codCli.Name = "tx_codCli";
-            tx_codCli.Size = new Size(125, 27);
+            tx_codCli.Size = new Size(199, 27);
             tx_codCli.TabIndex = 11;
             tx_codCli.TextChanged += textBox2_TextChanged;
             // 
@@ -225,9 +283,9 @@
             lbl_dadosCli.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_dadosCli.Location = new Point(174, 72);
             lbl_dadosCli.Name = "lbl_dadosCli";
-            lbl_dadosCli.Size = new Size(81, 24);
+            lbl_dadosCli.Size = new Size(156, 24);
             lbl_dadosCli.TabIndex = 10;
-            lbl_dadosCli.Text = "Código";
+            lbl_dadosCli.Text = "Identificação";
             lbl_dadosCli.Click += label2_Click;
             // 
             // lbl_cliente
@@ -295,6 +353,7 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(1091, 154);
             panel5.TabIndex = 17;
+            panel5.Paint += panel5_Paint;
             // 
             // tx_documento
             // 
@@ -302,6 +361,7 @@
             tx_documento.Name = "tx_documento";
             tx_documento.Size = new Size(267, 27);
             tx_documento.TabIndex = 18;
+            tx_documento.TextChanged += tx_documento_TextChanged;
             // 
             // lbl_doc
             // 
@@ -312,12 +372,13 @@
             lbl_doc.Size = new Size(128, 24);
             lbl_doc.TabIndex = 17;
             lbl_doc.Text = "Documento";
+            lbl_doc.Click += lbl_doc_Click;
             // 
             // lbl_nome
             // 
             lbl_nome.AutoSize = true;
             lbl_nome.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_nome.Location = new Point(359, 72);
+            lbl_nome.Location = new Point(399, 72);
             lbl_nome.Name = "lbl_nome";
             lbl_nome.Size = new Size(64, 24);
             lbl_nome.TabIndex = 11;
@@ -325,7 +386,7 @@
             // 
             // tx_nomeCli
             // 
-            tx_nomeCli.Location = new Point(359, 99);
+            tx_nomeCli.Location = new Point(399, 99);
             tx_nomeCli.Name = "tx_nomeCli";
             tx_nomeCli.Size = new Size(384, 27);
             tx_nomeCli.TabIndex = 12;
@@ -344,6 +405,7 @@
             // panel6
             // 
             panel6.BackColor = SystemColors.GradientInactiveCaption;
+            panel6.Controls.Add(lbl_listaProd);
             panel6.Controls.Add(btn_concluir);
             panel6.Controls.Add(bt_cancelar);
             panel6.Controls.Add(cb_pagamento);
@@ -360,6 +422,19 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(1064, 367);
             panel6.TabIndex = 18;
+            // 
+            // lbl_listaProd
+            // 
+            lbl_listaProd.AutoSize = true;
+            lbl_listaProd.Cursor = Cursors.Hand;
+            lbl_listaProd.Font = new Font("Stencil", 10.2F, FontStyle.Underline, GraphicsUnit.Point);
+            lbl_listaProd.ForeColor = Color.Green;
+            lbl_listaProd.Location = new Point(868, 167);
+            lbl_listaProd.Name = "lbl_listaProd";
+            lbl_listaProd.Size = new Size(180, 20);
+            lbl_listaProd.TabIndex = 22;
+            lbl_listaProd.Text = "Produtos da Venda";
+            lbl_listaProd.Click += lbl_listaProd_Click;
             // 
             // btn_concluir
             // 
@@ -382,6 +457,7 @@
             bt_cancelar.TabIndex = 19;
             bt_cancelar.Text = "Cancelar";
             bt_cancelar.UseVisualStyleBackColor = false;
+            bt_cancelar.Click += bt_cancelar_Click;
             // 
             // cb_pagamento
             // 
@@ -490,13 +566,18 @@
             Controls.Add(label1);
             Controls.Add(lbl_teste);
             Controls.Add(panel5);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frm_vendaProd";
             ShowIcon = false;
+            SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Venda de Produtos";
             Load += frm_vendaProd_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)search).EndInit();
+            ((System.ComponentModel.ISupportInitialize)qtd_prod).EndInit();
+            ((System.ComponentModel.ISupportInitialize)add_prod).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
@@ -553,5 +634,13 @@
         private ComboBox cb_transporte;
         private Button btn_concluir;
         private Panel panel8;
+        private PictureBox add_prod;
+        private Label label2;
+        private NumericUpDown qtd_prod;
+        private Label lbl_listaProd;
+        private Label label3;
+        private PictureBox search;
+        private TextBox tx_estoque;
+        private Label lbl_inv;
     }
 }

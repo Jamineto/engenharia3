@@ -142,7 +142,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFEBSURBVHhe7d0J
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFEBSURBVHhe7d0J
         uF1Vfffx3tybeU4IcwgZIBLmSYYwxQyEMAthFAhJIIEwOgGijCJjwqwiAgKKgn1rq6A4YLV1wGpRRFtF
         BbXUVgFFsa3UYb1r3ffFgv0S1/+uffbe66zf73k+z5OHkP9Zw15rnXvPOfv8haIoiqIoiqIoiqIoiqIo
         iqIoiqIoiqIoiqIoiqIoiqIoiqIoiqIoiqIoiqIoiqIoipJFJnkLvNO9m71Pe9/0fuD93HvBcyLSmLAG
@@ -491,4 +491,7 @@
         KIqiKIqiKIqiKIqiKIqiKIqiKIqitDp/8Rf/F90VMwKXJMdvAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>

@@ -68,35 +68,35 @@
             // 
             entradaDeProdutosToolStripMenuItem.ForeColor = Color.Black;
             entradaDeProdutosToolStripMenuItem.Name = "entradaDeProdutosToolStripMenuItem";
-            entradaDeProdutosToolStripMenuItem.Size = new Size(444, 36);
+            entradaDeProdutosToolStripMenuItem.Size = new Size(370, 34);
             entradaDeProdutosToolStripMenuItem.Text = "Entrada de Produtos";
             // 
             // perdaToolStripMenuItem
             // 
             perdaToolStripMenuItem.ForeColor = Color.Black;
             perdaToolStripMenuItem.Name = "perdaToolStripMenuItem";
-            perdaToolStripMenuItem.Size = new Size(444, 36);
+            perdaToolStripMenuItem.Size = new Size(370, 34);
             perdaToolStripMenuItem.Text = "Perda";
             // 
             // trocaToolStripMenuItem
             // 
             trocaToolStripMenuItem.ForeColor = Color.Black;
             trocaToolStripMenuItem.Name = "trocaToolStripMenuItem";
-            trocaToolStripMenuItem.Size = new Size(444, 36);
+            trocaToolStripMenuItem.Size = new Size(370, 34);
             trocaToolStripMenuItem.Text = "Troca";
             // 
             // zerarEstoqueToolStripMenuItem
             // 
             zerarEstoqueToolStripMenuItem.ForeColor = Color.Black;
             zerarEstoqueToolStripMenuItem.Name = "zerarEstoqueToolStripMenuItem";
-            zerarEstoqueToolStripMenuItem.Size = new Size(444, 36);
+            zerarEstoqueToolStripMenuItem.Size = new Size(370, 34);
             zerarEstoqueToolStripMenuItem.Text = "Zerar Estoque";
             // 
             // balançoToolStripMenuItem
             // 
             balançoToolStripMenuItem.ForeColor = Color.Black;
             balançoToolStripMenuItem.Name = "balançoToolStripMenuItem";
-            balançoToolStripMenuItem.Size = new Size(444, 36);
+            balançoToolStripMenuItem.Size = new Size(370, 34);
             balançoToolStripMenuItem.Text = "Balanço";
             // 
             // pnl_menu
@@ -114,7 +114,7 @@
             // 
             lbl_nome.BackColor = Color.Transparent;
             lbl_nome.Dock = DockStyle.Bottom;
-            lbl_nome.Font = new Font("Pokemon Solid", 20.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_nome.Font = new Font("Stencil", 18.2F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_nome.ForeColor = Color.Black;
             lbl_nome.Location = new Point(0, -30);
             lbl_nome.Name = "lbl_nome";
@@ -133,12 +133,12 @@
             // menu_principal
             // 
             menu_principal.BackColor = Color.Transparent;
-            menu_principal.Font = new Font("Verdana", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            menu_principal.Font = new Font("Stencil", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             menu_principal.ImageScalingSize = new Size(20, 20);
             menu_principal.Items.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem, estoqueToolStripMenuItem, vendaToolStripMenuItem });
             menu_principal.Location = new Point(0, 0);
             menu_principal.Name = "menu_principal";
-            menu_principal.Size = new Size(800, 40);
+            menu_principal.Size = new Size(800, 37);
             menu_principal.TabIndex = 2;
             menu_principal.Text = "menuStrip1";
             menu_principal.ItemClicked += menuStrip1_ItemClicked;
@@ -147,70 +147,71 @@
             // 
             cadastrosToolStripMenuItem.BackColor = Color.Transparent;
             cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { produtosToolStripMenuItem, categoriasToolStripMenuItem, pessoasToolStripMenuItem, usuáriosToolStripMenuItem });
-            cadastrosToolStripMenuItem.Font = new Font("Ravie", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point);
+            cadastrosToolStripMenuItem.Font = new Font("Stencil", 14.2F, FontStyle.Regular, GraphicsUnit.Point);
             cadastrosToolStripMenuItem.ForeColor = Color.Black;
             cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            cadastrosToolStripMenuItem.Size = new Size(196, 36);
+            cadastrosToolStripMenuItem.Size = new Size(159, 33);
             cadastrosToolStripMenuItem.Text = "Cadastros";
             cadastrosToolStripMenuItem.Click += cadastrosToolStripMenuItem_Click;
             // 
             // produtosToolStripMenuItem
             // 
-            produtosToolStripMenuItem.Font = new Font("Pokemon Solid", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            produtosToolStripMenuItem.Font = new Font("Stencil", 14.2F, FontStyle.Regular, GraphicsUnit.Point);
             produtosToolStripMenuItem.ForeColor = Color.Black;
             produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            produtosToolStripMenuItem.Size = new Size(246, 70);
+            produtosToolStripMenuItem.Size = new Size(242, 34);
             produtosToolStripMenuItem.Text = "Produtos";
+            produtosToolStripMenuItem.Click += produtosToolStripMenuItem_Click;
             // 
             // categoriasToolStripMenuItem
             // 
-            categoriasToolStripMenuItem.Font = new Font("Pokemon Solid", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            categoriasToolStripMenuItem.Font = new Font("Stencil", 14.2F, FontStyle.Regular, GraphicsUnit.Point);
             categoriasToolStripMenuItem.ForeColor = Color.Black;
             categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            categoriasToolStripMenuItem.Size = new Size(246, 70);
+            categoriasToolStripMenuItem.Size = new Size(242, 34);
             categoriasToolStripMenuItem.Text = "Categorias";
             // 
             // pessoasToolStripMenuItem
             // 
-            pessoasToolStripMenuItem.Font = new Font("Pokemon Solid", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            pessoasToolStripMenuItem.Font = new Font("Stencil", 14.2F, FontStyle.Regular, GraphicsUnit.Point);
             pessoasToolStripMenuItem.ForeColor = Color.Black;
             pessoasToolStripMenuItem.Name = "pessoasToolStripMenuItem";
-            pessoasToolStripMenuItem.Size = new Size(246, 70);
+            pessoasToolStripMenuItem.Size = new Size(242, 34);
             pessoasToolStripMenuItem.Text = "Pessoas";
             // 
             // usuáriosToolStripMenuItem
             // 
-            usuáriosToolStripMenuItem.Font = new Font("Pokemon Solid", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            usuáriosToolStripMenuItem.Font = new Font("Stencil", 14.2F, FontStyle.Regular, GraphicsUnit.Point);
             usuáriosToolStripMenuItem.ForeColor = Color.Black;
             usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            usuáriosToolStripMenuItem.Size = new Size(246, 70);
+            usuáriosToolStripMenuItem.Size = new Size(242, 34);
             usuáriosToolStripMenuItem.Text = "Usuários";
             // 
             // estoqueToolStripMenuItem
             // 
             estoqueToolStripMenuItem.BackColor = Color.Transparent;
             estoqueToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { entradaDeProdutosToolStripMenuItem, perdaToolStripMenuItem, trocaToolStripMenuItem, zerarEstoqueToolStripMenuItem, balançoToolStripMenuItem });
-            estoqueToolStripMenuItem.Font = new Font("Ravie", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point);
+            estoqueToolStripMenuItem.Font = new Font("Stencil", 14.2F, FontStyle.Regular, GraphicsUnit.Point);
             estoqueToolStripMenuItem.ForeColor = Color.Black;
             estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
-            estoqueToolStripMenuItem.Size = new Size(159, 36);
+            estoqueToolStripMenuItem.Size = new Size(128, 33);
             estoqueToolStripMenuItem.Text = "Estoque";
             // 
             // vendaToolStripMenuItem
             // 
             vendaToolStripMenuItem.BackColor = Color.Transparent;
             vendaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { vendaDeProdutosToolStripMenuItem, préVendaToolStripMenuItem, orçamentoToolStripMenuItem, caixaToolStripMenuItem });
-            vendaToolStripMenuItem.Font = new Font("Ravie", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point);
+            vendaToolStripMenuItem.Font = new Font("Stencil", 14.2F, FontStyle.Regular, GraphicsUnit.Point);
             vendaToolStripMenuItem.ForeColor = Color.Black;
             vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
-            vendaToolStripMenuItem.Size = new Size(127, 36);
+            vendaToolStripMenuItem.Size = new Size(102, 33);
             vendaToolStripMenuItem.Text = "Venda";
             // 
             // vendaDeProdutosToolStripMenuItem
             // 
             vendaDeProdutosToolStripMenuItem.ForeColor = Color.Black;
             vendaDeProdutosToolStripMenuItem.Name = "vendaDeProdutosToolStripMenuItem";
-            vendaDeProdutosToolStripMenuItem.Size = new Size(406, 36);
+            vendaDeProdutosToolStripMenuItem.Size = new Size(338, 34);
             vendaDeProdutosToolStripMenuItem.Text = "Venda de Produtos";
             vendaDeProdutosToolStripMenuItem.Click += vendaDeProdutosToolStripMenuItem_Click;
             // 
@@ -218,14 +219,14 @@
             // 
             préVendaToolStripMenuItem.ForeColor = Color.Black;
             préVendaToolStripMenuItem.Name = "préVendaToolStripMenuItem";
-            préVendaToolStripMenuItem.Size = new Size(406, 36);
+            préVendaToolStripMenuItem.Size = new Size(338, 34);
             préVendaToolStripMenuItem.Text = "Pré-Venda";
             // 
             // orçamentoToolStripMenuItem
             // 
             orçamentoToolStripMenuItem.ForeColor = Color.Black;
             orçamentoToolStripMenuItem.Name = "orçamentoToolStripMenuItem";
-            orçamentoToolStripMenuItem.Size = new Size(406, 36);
+            orçamentoToolStripMenuItem.Size = new Size(338, 34);
             orçamentoToolStripMenuItem.Text = "Orçamento";
             // 
             // caixaToolStripMenuItem
@@ -233,37 +234,37 @@
             caixaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { saídaDeCaixaToolStripMenuItem, entradaDeCaixaToolStripMenuItem, conferênciaDeCaixaToolStripMenuItem });
             caixaToolStripMenuItem.ForeColor = Color.Black;
             caixaToolStripMenuItem.Name = "caixaToolStripMenuItem";
-            caixaToolStripMenuItem.Size = new Size(406, 36);
+            caixaToolStripMenuItem.Size = new Size(338, 34);
             caixaToolStripMenuItem.Text = "Caixa";
             // 
             // saídaDeCaixaToolStripMenuItem
             // 
             saídaDeCaixaToolStripMenuItem.ForeColor = Color.Black;
             saídaDeCaixaToolStripMenuItem.Name = "saídaDeCaixaToolStripMenuItem";
-            saídaDeCaixaToolStripMenuItem.Size = new Size(445, 36);
+            saídaDeCaixaToolStripMenuItem.Size = new Size(370, 34);
             saídaDeCaixaToolStripMenuItem.Text = "Saída de Caixa";
             // 
             // entradaDeCaixaToolStripMenuItem
             // 
             entradaDeCaixaToolStripMenuItem.ForeColor = Color.Black;
             entradaDeCaixaToolStripMenuItem.Name = "entradaDeCaixaToolStripMenuItem";
-            entradaDeCaixaToolStripMenuItem.Size = new Size(445, 36);
+            entradaDeCaixaToolStripMenuItem.Size = new Size(370, 34);
             entradaDeCaixaToolStripMenuItem.Text = "Entrada de Caixa";
             // 
             // conferênciaDeCaixaToolStripMenuItem
             // 
             conferênciaDeCaixaToolStripMenuItem.ForeColor = Color.Black;
             conferênciaDeCaixaToolStripMenuItem.Name = "conferênciaDeCaixaToolStripMenuItem";
-            conferênciaDeCaixaToolStripMenuItem.Size = new Size(445, 36);
+            conferênciaDeCaixaToolStripMenuItem.Size = new Size(370, 34);
             conferênciaDeCaixaToolStripMenuItem.Text = "Conferência de Caixa";
             // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(350, 170);
+            pictureBox1.Location = new Point(379, 217);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(107, 112);
+            pictureBox1.Size = new Size(23, 28);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
@@ -318,6 +319,6 @@
         private ToolStripMenuItem entradaDeCaixaToolStripMenuItem;
         private ToolStripMenuItem conferênciaDeCaixaToolStripMenuItem;
         private MenuStrip menu_principal;
-        private PictureBox pictureBox1;
+        public PictureBox pictureBox1;
     }
 }
