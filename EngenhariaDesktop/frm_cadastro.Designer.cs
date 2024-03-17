@@ -153,7 +153,6 @@
             // cb_transporte
             // 
             cb_transporte.FormattingEnabled = true;
-            cb_transporte.Items.AddRange(new object[] { "SEDEX", "Transportadora X", "Transp. Marítimo", "Transp. Áereo" });
             cb_transporte.Location = new Point(568, 248);
             cb_transporte.Name = "cb_transporte";
             cb_transporte.Size = new Size(193, 28);

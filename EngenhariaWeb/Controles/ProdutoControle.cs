@@ -7,7 +7,7 @@ namespace EngenhariaWeb.Controles
 {
     public class ProdutoControle
     {
-        //colocar a chamada do singleton aqui e passar para a model a conexao
+
         static List<ProdutoLista> produtosEmEspera = new List<ProdutoLista>();
 
         public List<Produto> obterProdutos()
@@ -15,7 +15,6 @@ namespace EngenhariaWeb.Controles
             Produto produto = new Produto();
             Singleton instance = Singleton.getInstance();
             MySqlConnection con = instance.ConnectionStart();
-            con = instance.ConnectionStart();
             con.Open();
             return produto.obterProdutos(con);
         }
@@ -30,7 +29,6 @@ namespace EngenhariaWeb.Controles
             produto.categoria = "Teste";
             Singleton instance = Singleton.getInstance();
             MySqlConnection con = instance.ConnectionStart();
-            con = instance.ConnectionStart();
             con.Open();
             return produto.gravarProduto(produto, con);
         }
@@ -40,7 +38,6 @@ namespace EngenhariaWeb.Controles
             Produto produto = new Produto();
             Singleton instance = Singleton.getInstance();
             MySqlConnection con = instance.ConnectionStart();
-            con = instance.ConnectionStart();
             con.Open();
             return produto.obterPorCodigo(id, con);
         }
@@ -50,7 +47,6 @@ namespace EngenhariaWeb.Controles
             Produto produto = new Produto();
             Singleton instance = Singleton.getInstance();
             MySqlConnection con = instance.ConnectionStart();
-            con = instance.ConnectionStart();
             con.Open();
             return produto.obterEstoqueProduto(id, con);
         }

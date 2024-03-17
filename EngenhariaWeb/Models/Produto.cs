@@ -1,15 +1,18 @@
 ﻿using EngenhariaWeb.DAO;
+using EngenhariaWeb.Util;
 using MySql.Data.MySqlClient;
 
 namespace EngenhariaWeb.Models
 {
-    public class Produto
+    public class Produto : ISubject
     {
         public int id { get; set; }
         public String descricao {  get; set; }
         public String categoria { get; set; }
         public int estoque{ get; set; }
         public float preco { get; set; }
+
+        private List<IObserver> observadores = new List<IObserver>();
 
         public Produto(int id, string descricao, string categoria, int estoque, float preco)
         {
@@ -44,6 +47,22 @@ namespace EngenhariaWeb.Models
         {
             ProdutoDAO produtoDAO = new ProdutoDAO();
             return produtoDAO.obterProdutos(con);
+        }
+
+        public void AdicionarObservador(IObserver obs)
+        {
+            observadores.Add(obs);
+        }
+
+        public void RemoverObservador(IObserver obs)
+        {
+            observadores.Remove(obs);
+        }
+
+        public void NotificarObservadores()
+        {
+            foreach (IObserver obs in observadores)
+                obs.Atualizar(this);
         }
     }
 }
